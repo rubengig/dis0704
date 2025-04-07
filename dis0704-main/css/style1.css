@@ -1,0 +1,114 @@
+:root {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: black;
+}
+
+header {
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: transparent;
+    z-index: 10;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    column-gap: 450px;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    nav {
+        ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.welcome {
+    color: white;
+    position: relative;
+    height: 85vh;
+    background: url('/img/img1.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    h2,
+    p,
+    a {
+        position: relative;
+        z-index: 2;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin: 10px 0;
+        color: white;
+    }
+
+    p:first-of-type {
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+        margin: 10px 0;
+    }
+
+    p:last-of-type {
+        font-size: 14px;
+        max-width: 400px;
+        color: #ccc;
+        margin: 10px 0;
+    }
+
+    a {
+        margin-top: 20px;
+        padding: 15px 30px;
+        border: 2px solid white;
+        border-radius: 75px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: background 0.3s, color 0.3s;
+
+        &:hover {
+            background: white;
+            color: black;
+          }
+    }
+}
